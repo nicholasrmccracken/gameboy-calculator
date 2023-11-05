@@ -10,58 +10,61 @@
     <script src="script.js" defer></script>
 </head>
 <body>
-    <div id="calculator-body">
-        <div id="body-lines">
-            <div class="vertical-line"></div>
-            <div class="vertical-line"></div>
+    <div id="calculator-body" class="container">
+        <div id="body-lines" class="container">
+            <div class="container">
+                <div id="left-line" class="vertical-line"></div>
+                <div id="right-line" class="vertical-line"></div>
+            </div>
             <div id="horizontal-line"></div>
         </div>
-        <div id="screen-border">
-            <div id="battery">
+        <div id="screen-border" class="container">
+            <div id="battery" class="container">
                 <div id="battery-light"></div>
-                <p>BATTERY</p>
+                <div id="battery-text">BATTERY</div>
             </div>
-            <div id="screen-display">
-                <p id="screen-previous"></p>
-                <p id="screen-current"></p>
+            <div id="screen-display" class="container">
+                <p id="screen-previous" class="calculator-data">0</p>
+                <p id="screen-current" class="calculator-data">0</p></p>
             </div>
         </div>
-        <p>CALC BOY <span id="trademark">TM</span></p>
-        <div id="calculator-buttons">
-            <button id="AC">AC</button>
-            <button id="C">C</button>
-            <button id=".">.</button>
-            <button class="operator">+</button>
+        <p id="logo">CALC BOY <span id="trademark">TM</span></p>
+        <div id="calculator-buttons" class="container">
+            <button id="AC" class="button">AC</button>
+            <button id="C" class="button">C</button>
+            <button id="decimal" class="button">.</button>
+            <button class="operator button">+</button>
 
-            <button class="value">7</button>
-            <button class="value">8</button>
-            <button class="value">9</button>
-            <button class="operator">-</button>
+            <button class="value button">7</button>
+            <button class="value button">8</button>
+            <button class="value button">9</button>
+            <button class="operator button">-</button>
 
-            <button class="value">4</button>
-            <button class="value">5</button>
-            <button class="value">6</button>
-            <button class="operator">*</button>
+            <button class="value button">4</button>
+            <button class="value button">5</button>
+            <button class="value button">6</button>
+            <button class="operator button">*</button>
 
-            <button class="value">1</button>
-            <button class="value">2</button>
-            <button class="value">3</button>
-            <button class="value">/</button>
+            <button class="value button">1</button>
+            <button class="value button">2</button>
+            <button class="value button">3</button>
+            <button class="value button">/</button>
 
-            <button class="value">0</button>
-            <button id="=">=</button>
+            <button class="value button">0</button>
+            <button id="equals" class="button">=</button>
         </div>
 
-        <div id="control-buttons">
-            <div id="reset">
-                <button></button>
+        <div id="control-buttons" class="container">
+            <div id="reset" class="container">
+                <button class="button controller"></button>
                 <p>RESET</p>
             </div>
-            <div id="power">
-                <button></button>
+            <div id="power" class="container">
+                <button class="button controller"></button>
                 <p>POWER</p>
             </div>
         </div>
     </div>
+    <footer></footer>
 </body>
 </html>
