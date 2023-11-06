@@ -95,7 +95,7 @@ function calculate() {
             break;
 
         case '-':
-            result = parseFloat(firstOperand) - parseFloat(currentOperand.textContent);
+            result = Math.max(parseFloat(firstOperand) - parseFloat(currentOperand.textContent), 0);
             break;
 
         case '*':
