@@ -7,7 +7,7 @@ calculatorButtons.addEventListener('click', (e) => {
     if (currentOperand.textContent) {
         if (e.target.classList.contains('value') && currentOperand.textContent.length < 13) {
             updateOperand(e.target);
-        } else if (e.target.classList.contains('operator')) {
+        } else if (e.target.classList.contains('operator') && currentOperand.textContent !== 'Error') {
             storeOperand(e.target);
         } else if (e.target.id === 'all-clear') {
             allClear();
@@ -15,7 +15,7 @@ calculatorButtons.addEventListener('click', (e) => {
             clear();
         } else if (e.target.id === 'decimal') {
             addDecimal();
-        } else if (e.target.id === 'equals' && previousOperand.textContent) {
+        } else if (e.target.id === 'equals' && previousOperand.textContent && !previousOperand.textContent.includes('=')) {
             calculate();
         }
     }
@@ -35,8 +35,18 @@ function powerSwitch(light) {
     if (currentOperand.textContent) {
         powerDown(light);
     } else {
-        currentOperand.textContent = '0';
         light.style.backgroundColor = 'var(--screen-color)';
+        (new Audio('sounds/gameboy-startup.mp3')).play();
+
+        previousOperand.style.margin = 'auto';
+        previousOperand.style.fontSize = '30px';
+        previousOperand.textContent = 'Calc Boy';
+        
+        setTimeout(() => {
+            previousOperand.style.margin = '';
+            previousOperand.style.fontSize = '20px';
+            allClear();
+        }, 2000);
     }
 }
 
