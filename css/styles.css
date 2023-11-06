@@ -2,6 +2,7 @@
     --calculator-color: rgb(197, 194, 194);
     --line-color: rgb(181, 180, 180);
     --screen-border-color: rgb(119, 116, 116);
+    --hovered-control-color: rgb(129, 126, 126);
     --screen-color: rgb(139, 172, 15);
     --text-color: rgb(21, 62, 146);
     --button-color: rgb(185, 109, 109);
@@ -43,8 +44,13 @@ body {
     background-color: var(--line-color);
 }
 
-#left-line { margin-left: 10%; }
-#right-line { margin: 0 10% 0 auto; }
+#left-line { 
+    margin-left: 10%; 
+}
+
+#right-line { 
+    margin: 0 10% 0 auto; 
+}
 
 #horizontal-line {
     background-color: var(--line-color);
@@ -76,14 +82,14 @@ body {
 
 .calculator-data {
     font-weight: 900;
-    font-size: 40px;
+    font-size: 30px;
     margin-right: 6px;
+    text-align: right;
 }
 
 #screen-previous {
-    font-size: 30px;
+    font-size: 20px;
     margin-bottom: 15px;
-    display: none;
 }
 
 #battery {
@@ -162,7 +168,7 @@ body {
     justify-content: center;
     align-items: center;
     gap: 8px;
-    transform: rotate(-10deg);
+    transform: rotate(-15deg);
 }
 
 #control-buttons p {
@@ -174,8 +180,12 @@ body {
 #control-buttons .controller {
     background-color: var(--screen-border-color);
     width: 45px;
-    height: 10px;
+    height: 11px;
     box-shadow: 2px 2px 3px 1px rgba(0, 0, 0, 0.7);
+}
+
+#control-buttons .controller:hover {
+    background-color: var(--hovered-control-color);
 }
 
 #control-buttons .controller:active {
