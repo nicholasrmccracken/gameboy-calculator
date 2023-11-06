@@ -180,7 +180,7 @@ body {
 #control-buttons .controller {
     background-color: var(--screen-border-color);
     width: 45px;
-    height: 11px;
+    height: 13px;
     box-shadow: 2px 2px 3px 1px rgba(0, 0, 0, 0.7);
 }
 
