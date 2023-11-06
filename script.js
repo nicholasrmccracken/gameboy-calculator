@@ -75,7 +75,7 @@ function allClear() {
 }
 
 function clear() {
-    currentOperand.textContent = currentOperand.textContent.slice(0, -1);
+    currentOperand.textContent = currentOperand.textContent.length > 1 ? currentOperand.textContent.slice(0, -1) : 0;
 }
 
 function addDecimal() {
